@@ -1,6 +1,6 @@
 ####### Identifying the knowledge and capacity gaps in Southeast Asian insect conservation
 ####### Author: Xin Rui Ong
-####### (5X) Twitter #conservation posts - Additional Analyses (Bootstrapped dataset & trend comparisons)
+####### (5d) Twitter #conservation posts - Additional Analyses (Bootstrapped dataset & trend comparisons)
 
 # Description ----
 ## This script details our bootstrapping and trend comparison analyses for Twitter dataset.
