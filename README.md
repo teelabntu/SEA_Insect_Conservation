@@ -51,5 +51,6 @@ All codes/scripts are provided in the **Scripts** folder.
     -   5d_Twitter_Additional_Analyses.R: Bootstrapping and trends comparison analysis of Twitter data.
 
 # Contact
-
+For queries related to the scripts, please contact the following persons:
 Xin Rui Ong: @xinruiong.bsky.social
+Belle Tan: http://linkedin.com/in/belle-tan37
