@@ -12,6 +12,7 @@
 ## Files from Zenodo (https://doi.org/10.5281/zenodo.11195326): "Curated_Datasets.zip"
 
 # Setup: Load packages ----
+library(readxl)
 library(tidyverse)
 library(data.table)
 library(ggsci)
