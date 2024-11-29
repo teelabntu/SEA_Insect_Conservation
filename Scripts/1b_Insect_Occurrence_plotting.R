@@ -7,17 +7,15 @@
 ## Figure 2A: Map of insect occurrence records
 ## Figure 2B: Number of insect occurrence records across the years
 ## For cleaning of raw occurrence records, refer to "1a_Insect_Occurrence_cleaning.R".
-## Files from Zenodo (https://zenodo.org/records/14227113): SEA_Insect_Conservation_Quantitative_Review_Dataset_v3.xlsx
+## Files from Zenodo (https://doi.org/10.5281/zenodo.11195326): "Curated_Datasets.zip"
 
 # Setup: Load packages and fonts ----
-library(readxl)
 library(tidyverse)
 windowsFonts(Roboto=windowsFont("Roboto Condensed"))
 
 # Read data ----
 all_occurrences <- 
-  read_excel("data/SEA_Insect_Conservation_Quantitative_Review_Dataset_v3.xlsx",
-             sheet = "(1) Insect Occurrence") # Cleaned occurrence records
+  read.csv("Curated_Datasets/1_Insect_Occurrences.csv", header = T) # Cleaned occurrence records
 
 # Determine top 10 insect orders in occurrence dataset
 all_occurrences %>% filter(order != "") %>% 

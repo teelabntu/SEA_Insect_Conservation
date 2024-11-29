@@ -8,7 +8,7 @@
 ## The model produces a compound score and the sentiments are assigned based on the following thresholds: positive >= 0.05, -0.05 > neutral > 0.05, negative <= -0.05. 
 ## Note that the VADER model was performed on raw captions as punctuations and word shape (e.g. caps) are used to determine sentiments. 
 ## Sources: https://towardsdatascience.com/the-most-favorable-pre-trained-sentiment-classifiers-in-python-9107c06442c6; https://pypi.org/project/vaderSentiment
-## Files from Zenodo (https://zenodo.org/records/14227113): SEA_Insect_Conservation_Quantitative_Review_Dataset_v3.xlsx
+## Files from Zenodo (https://doi.org/10.5281/zenodo.11195326): "Curated_Datasets.zip"
 
 # {python}
 ## Importing relevant libraries
@@ -31,7 +31,7 @@ nlp.add_pipe("language_detector")
 analyser = SentimentIntensityAnalyzer()
 
 ## Read data
-insect_conservation_posts = pd.read_excel("data//SEA_Insect_Conservation_Quantitative_Review_Dataset_v3.xlsx", sheet_name = "(5-2) Twitter - Insects")
+insect_conservation_posts = pd.read_csv("Curated_Datasets//5_2_Twiiter_Insects.csv")
 list(insect_conservation_posts) # View column headers
 
 all_caption_sentiment_new = []

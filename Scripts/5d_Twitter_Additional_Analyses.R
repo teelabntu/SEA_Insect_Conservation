@@ -4,7 +4,7 @@
 
 # Description ----
 ## This script details our bootstrapping and trend comparison analyses for Twitter dataset.
-## Files from Zenodo (https://zenodo.org/records/14227113): SEA_Insect_Conservation_Quantitative_Review_Dataset_v3.xlsx
+## Files from Zenodo (https://doi.org/10.5281/zenodo.11195326): "Curated_Datasets.zip"
 
 # Setup: Load packages ----
 library(readxl)
@@ -16,8 +16,8 @@ windowsFonts(Roboto=windowsFont("Roboto Condensed"))
 
 # Read data ----
 conservation_posts <- 
-  read_excel("data/SEA_Insect_Conservation_Quantitative_Review_Dataset_v3.xlsx",
-             sheet = "(5-1) Twitter") # Twitter #conservation posts with assigned taxonomic group (see xxx for spaCy classifier script)
+  read.csv("Curated_Datasets/5_1_Twitter.csv",
+           header = T) # Twitter #conservation posts with assigned taxonomic group
 conservation_posts$Day_Posted <- 
   format(conservation_posts$Day_Posted, format="%m-%d")
 

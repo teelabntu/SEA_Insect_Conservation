@@ -5,7 +5,7 @@
 # Description ----
 ## This script details our topic modelling analysis.
 ## Here, we generated topic models to determine the main topics covered based on the abstracts from the primary literature.
-## Files from Zenodo (https://zenodo.org/records/14227113): SEA_Insect_Conservation_Quantitative_Review_Dataset_v3.xlsx
+## Files from Zenodo (https://doi.org/10.5281/zenodo.11195326): "Curated_Datasets.zip"
 
 # Setup: Load packages ----
 library(readxl)
@@ -14,8 +14,7 @@ library(stm)
 
 # Read data ----
 pri_lit <- 
-  read_excel("data/SEA_Insect_Conservation_Quantitative_Review_Dataset_v3.xlsx",
-             sheet = "(2) Primary Literature") # Cleaned primary literature records
+  read_excel("Curated_Datasets/2_Primary_Literature.xlsx") # Cleaned primary literature records
 
 # Prepare data for topic modelling - Derived from each paper's abstract
 insect_stm_ab <-textProcessor(pri_lit$Abstract, metadata = pri_lit)

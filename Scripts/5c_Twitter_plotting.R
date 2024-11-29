@@ -9,10 +9,9 @@
 ## Figure 5B: Wordcloud of top 20 occurring words in insect #conservation posts
 ## Figure 5C: Number of insect #conservation posts across calendar days
 ## Figure 5D: Word clouds of positive, neutral and negative sentiments in insect #conservation posts
-## Files from Zenodo (https://zenodo.org/records/14227113): SEA_Insect_Conservation_Quantitative_Review_Dataset_v3.xlsx
+## Files from Zenodo (https://doi.org/10.5281/zenodo.11195326): "Curated_Datasets.zip"
 
 # Setup: Load packages ----
-library(readxl)
 library(tidyverse)
 library(zoo)
 library(wordcloud2)
@@ -21,12 +20,12 @@ windowsFonts(Roboto=windowsFont("Roboto Condensed"))
 
 # Read data ----
 conservation_posts <- 
-  read_excel("data/SEA_Insect_Conservation_Quantitative_Review_Dataset_v3.xlsx",
-             sheet = "(5-1) Twitter") # Twitter #conservation posts with assigned taxonomic group (see xxx for spaCy classifier script)
+  read.csv("Curated_Datasets/5_1_Twitter.csv",
+           header = T) # Twitter #conservation posts with assigned taxonomic group
 
 insect_conservation_posts <- 
-  read_excel("data/SEA_Insect_Conservation_Quantitative_Review_Dataset_v3.xlsx",
-             sheet = "(5-2) Twitter - Insects") # Twitter insect #conservation posts with assigned sentiments (see xxx for VADER sentiment script)
+  read.csv("Curated_Datasets/5_2_Twitter_Insects.csv",
+           header = T) # Twitter insect #conservation posts with assigned sentiments
 
 conservation_posts$Day_Posted <- 
   format(conservation_posts$Day_Posted, format="%m-%d")

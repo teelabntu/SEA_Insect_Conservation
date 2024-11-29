@@ -8,7 +8,7 @@ These were performed using **R Version 4.4.1** and **Python Version 3.10.4**.
 
 # Getting Started
 
-Before running the codes, please download the accompanying data from Zenodo (<https://zenodo.org/records/14227113>).
+Before running the codes, please download the accompanying data from Zenodo (<https://doi.org/10.5281/zenodo.11195326>).
 
 ## Required Packages
 
@@ -51,6 +51,8 @@ All codes/scripts are provided in the **Scripts** folder.
     -   5d_Twitter_Additional_Analyses.R: Bootstrapping and trends comparison analysis of Twitter data.
 
 # Contact
+
 For queries related to the scripts, please contact the following persons:
-Xin Rui Ong: @xinruiong.bsky.social
-Belle Tan: http://linkedin.com/in/belle-tan37
+
+-   Xin Rui Ong: @xinruiong.bsky.social
+-   Belle Tan: <http://linkedin.com/in/belle-tan37>

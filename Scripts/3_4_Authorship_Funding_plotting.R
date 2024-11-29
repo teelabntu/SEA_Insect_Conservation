@@ -6,10 +6,9 @@
 ## This script is for the plotting of our authorship and funding data:
 ## Figure 4A: Proportion of authorship and funding sources by study country
 ## Figure 4B: Proportion of authorship and funding sources by year
-## Files from Zenodo (https://zenodo.org/records/14227113): SEA_Insect_Conservation_Quantitative_Review_Dataset_v3.xlsx
+## Files from Zenodo (https://doi.org/10.5281/zenodo.11195326): "Curated_Datasets.zip"
 
 # Setup: Load packages ----
-library(readxl)
 library(tidyverse)
 library(data.table)
 library(patchwork)
@@ -17,11 +16,11 @@ windowsFonts(Roboto=windowsFont("Roboto Condensed"))
 
 # Read data ----
 authors <- 
-  read_excel("data/SEA_Insect_Conservation_Quantitative_Review_Dataset_v3.xlsx",
-             sheet = "(3) Authorship") # Authorship information (derived from primary literature records)
+  read.csv("Curated_Datasets/3_Authorship.csv",
+           header = T) # Authorship information (derived from primary literature records)
 funding <- 
-  read_excel("data/SEA_Insect_Conservation_Quantitative_Review_Dataset_v3.xlsx",
-             sheet = "(4) Funding") # Funding information (derived from primary literature records)
+  read.csv("Curated_Datasets/4_Funding.csv",
+           header = T) # Funding information (derived from primary literature records)
 
 authors <- data.table(authors)  # convert to data.table
 funding <- data.table(funding)  # convert to data.table

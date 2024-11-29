@@ -5,7 +5,7 @@
 # Description ----
 ## This script is for the processing of raw occurrence data obtained from GBIF.
 ## Raw datasets are obtained through GBIF's Occurrence Download. Refer to DOIs listed in Table S1 in Supplementary Materials 1 for more information.
-## Files from Zenodo (https://zenodo.org/records/14227113) - "GBIF_Raw_Insect_Occurrences.zip".
+## Files from Zenodo (https://doi.org/10.5281/zenodo.11195326) - "GBIF_Raw_Insect_Occurrences.zip".
 
 # Setup: Load packages ----
 library(tidyverse)
@@ -13,12 +13,12 @@ library(CoordinateCleaner)
 
 # Read and combine raw data ----
 ## Source: "GBIF_Raw_Insect_Occurrences.zip"
-IDN <- read.csv("data/GBIF_IDN.csv") # 2001 to 2022 occurrence records from Indonesia
-MYS <- read.csv("data/GBIF_MYS.csv") # 2001 to 2022 occurrence records from Malaysia
-SGP <- read.csv("data/GBIF_SGP.csv") # 2001 to 2022 occurrence records from Singapore
-THA <- read.csv("data/GBIF_THA.csv") # 2001 to 2022 occurrence records from Thailand
-SEA_7 <- read.csv("data/GBIF_PHL_BRN_KHM_VNM_TLS_MMR_LAO.csv") # 2001 to 2022 occurrence records from Philippines, Brunei, Cambodia, Vietnam, Timor-Leste, Myanmar, Laos
-SEA_2023 <- read.csv("data/GBIF_SEA_2023.csv") # 2023 occurrence records from all 11 Southeast Asian countries
+IDN <- read.csv("GBIF_Raw_Insect_Occurrences/GBIF_IDN.csv") # 2001 to 2022 occurrence records from Indonesia
+MYS <- read.csv("GBIF_Raw_Insect_Occurrences/GBIF_MYS.csv") # 2001 to 2022 occurrence records from Malaysia
+SGP <- read.csv("GBIF_Raw_Insect_Occurrences/GBIF_SGP.csv") # 2001 to 2022 occurrence records from Singapore
+THA <- read.csv("GBIF_Raw_Insect_Occurrences/GBIF_THA.csv") # 2001 to 2022 occurrence records from Thailand
+SEA_7 <- read.csv("GBIF_Raw_Insect_Occurrences/GBIF_PHL_BRN_KHM_VNM_TLS_MMR_LAO.csv") # 2001 to 2022 occurrence records from Philippines, Brunei, Cambodia, Vietnam, Timor-Leste, Myanmar, Laos
+SEA_2023 <- read.csv("GBIF_Raw_Insect_Occurrences/GBIF_SEA_2023.csv") # 2023 occurrence records from all 11 Southeast Asian countries
 
 combined <- rbind(IDN, MYS, SGP, THA, SEA_7, SEA_2023)
 

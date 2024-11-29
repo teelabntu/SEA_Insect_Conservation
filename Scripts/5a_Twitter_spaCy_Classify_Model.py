@@ -8,7 +8,7 @@
 ## Other packages used that are within Python Standard Library: re, ast, pathlib
 ## Ensure that the pre-trained english pipeline (i.e. en_core_web_sm) from spacy is installed (python -m spacy download en_core_web_sm)
 ## Youtube tutorial that I referenced: https://www.youtube.com/watch?v=7PD48PFL9VQ&t=1071s
-## Files from Zenodo (https://zenodo.org/records/14227113) - "Twitter_spacy.zip", "spacy-model-best.zip", "SEA_Insect_Conservation_Quantitative_Review_Dataset_v3.xlsx"
+## Files from Zenodo (https://doi.org/10.5281/zenodo.11195326): "Twitter_spacy.zip", "spacy-model-best.zip", "Curated_Datasets.zip"
 
 # {python}
 ## Importing relevant libraries
@@ -378,7 +378,7 @@ summary_eval_metrics = pd.read_csv("data//threshold_spaCy_summary_eval_metrics_t
 
 ## Step 6. Applying the trained spaCy classifer all download #conservation posts for categorization
 # Read data
-conservation_posts = pd.read_excel("data//SEA_Insect_Conservation_Quantitative_Review_Dataset_v3.xlsx", sheet_name = "(5-1) Twitter")
+conservation_posts = pd.read_csv("Curated_Datasets//5_1_Twiiter.csv")
 list(conservation_posts) # view column headers
 
 # Load the trained classifier
